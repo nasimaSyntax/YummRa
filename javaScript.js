@@ -681,6 +681,9 @@ placeOrder.addEventListener("click", function(e) {
     placeOrder.textContent = "Send";
    }, 5000);
 })
+
+
+
 document.addEventListener("click", function(e) {
     const btn = e.target.closest(".faq-show, .add-faq");
     if (!btn) return;
@@ -697,6 +700,9 @@ document.addEventListener("click", function(e) {
     });
     para.classList.toggle("show");
 });
+
+
+
 // Fix: select main correctly (line 2 in your file uses "Main" but HTML tag is lowercase "main")
 document.addEventListener("click", function(e) {
     const faqContact = e.target.closest("#faq-contact, [data-page='contact'], .contact-link");

@@ -3645,7 +3645,7 @@ margin-top: 87px;
 /*check out form*/
 .check-out-form {
     width: 80%;
-    height: 93%;
+    height: 600px;
     position: fixed;
     top: 3%;
     left: 50%;
@@ -3655,13 +3655,13 @@ margin-top: 87px;
     border-radius: 10px;
     display: grid;
     grid-template-columns: 1fr 1.4fr;
+    box-shadow: -6px 6px 10px rgba(0, 0, 0, 0.15);
+    border: 4px dashed var(--orange);
     display: none;
 }
 .check-out-form .check-order {
     width: 100%;
-    height: auto;
-    min-height: 50vh;
-    background-color: #ffcf6d;
+    height: 80%;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -3672,8 +3672,8 @@ margin-top: 87px;
 }
 .check-order>button {
     position: absolute;
-    top: -2%;
-    left: -9%;
+    top: -1%;
+    left: -15%;
     width: 50px;
     height: 50px;
     border: none;
@@ -3733,7 +3733,7 @@ margin-top: 87px;
     align-items: end;
 }
 .check-scroll .food-imgs .check-img {
-    width: 8em;
+    width: 7em;
     position: relative;
     height: 5em;
 }
@@ -3744,7 +3744,7 @@ margin-top: 87px;
 }
 .check-scroll .check-food-name {
     margin-left: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 1.3em;
 }
 .check-scroll .check-quant {
     position: relative;
@@ -3791,7 +3791,7 @@ margin-top: 87px;
 .check-information {
     width: 100%;
     height: auto;
-    padding: 0.8em;
+    padding: 0.7em;
     display: flex;
     flex-direction: column;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -3858,7 +3858,7 @@ margin-top: 87px;
 }
 .check-method-way .method-delivery {
     width: 100%;
-    height: 4em;
+    height: 2.3em;
     padding: 5px;
     display: flex;
     align-items: center;
@@ -3958,7 +3958,7 @@ margin-top: 87px;
 }
 .check-payment .payment-method-way .payments-method {
     width: 100%;
-    height: 4em;
+    height: 2.3em;
     border-radius: 10px;
     padding: 5px;
     align-items: center;
@@ -3989,6 +3989,7 @@ margin-top: 87px;
 .additional .additional-head {
     display: flex;
     align-items: end;
+    margin-bottom: 5px;
 }
 .additional .additional-head img {
     width: 23px;

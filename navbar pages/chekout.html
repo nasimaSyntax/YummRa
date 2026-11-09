@@ -1,0 +1,17 @@
+         <div class="check-food" data-id="${order.id}">
+              <div class="food-imgs">
+                 <div class="check-img">
+                    <img src="${order.img}">
+                 </div>
+                 <div class="check-food-name">
+                    <h4 class="checkFoodName">${order.name}</h4>
+                    <span class="checkFoodCost">${order.price}</span>
+                 </div>
+             </div>
+             <div class="check-quant">
+                  <button class="check-less" type="button" data-id="${order.id}">-</button>
+                  <span id="check-quantity">${order.quantity}</span>
+                  <button class="check-plus" type="button" data-id="${order.id}">+</button>
+                  <button type="button" class="check-delete" data-id ="${order.id}"><img src="Icons/x.png"></button>
+             </div>
+         </div>

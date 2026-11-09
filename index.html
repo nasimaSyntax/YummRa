@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="foods images/y.png">
+    <title>Yummra Restaurant</title>
+</head>
+<body>
+    <header id="head">
+    <!--top navbar-->
+        <div class="top-navbar"> 
+            <button type="button" id="burgerMenu"><img src="Icons/menu.png" title="navbar menu" alt="menu"></button>
+            <div class="right-top-icon">
+                <img src="Icons/search.png" alt="search" id="search-icon" title="search">
+                <img src="Icons/user-round (1).png" alt="user" id="user">
+                <div class="user-sign">
+                    <p>welcome to YummRa</p>
+                    <button type="button" id="sign-btn">Sign in</button>
+                    <button type="button" id="creat-btn">Creat Account</button>
+                    <button type="button" id="guest-btn">Continue as Quest</button>
+                </div>
+                <img src="Icons/heart.png" alt="heart" id="fav-icon" title="Your favorites items">
+                <img src="Icons/cart.png" alt="cart" id="food-cart" title="cart food" data-page="shop cart">
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+        <div class="down-navbar">
+            <div class="logo">
+                <img src="foods images/n.png" alt="logo img" width="60px" height="auto">
+                <h2>umm<span>Ra</span></h2>
+           </div> 
+           <nav class="nav-menu">
+              <ul class="ul-list">
+                <li><a href="index.html" id="homePage">Home</a></li>
+                <li><a href="#"  data-page="menu"  id="menu">Menu</a></li>
+                <li><a href="#"  data-page="contact" id="contact">Contact</a></li>
+                <li><a href="#"  data-page="about" id="about">About</a></li>
+              </ul>
+           </nav>
+           <div class="order">
+              <button type="button" id="bookTable">Book a table<img src="Icons/arrow.png" width="24px" height="24px"></button>
+           </div>
+        </div>
+    </header>
+    <main id="Main">
+        <section id="home">
+            <div class="hero">
+                 <div class="hero-texts">
+                    <h1>Every Bite Tell a <span>Delicious</span> Story</h1>
+                    <p>Fresh ingredients, bold flavors and a passion for great food,
+                     come together to create an unforgettable dining experience.<br>
+                      From your first bite to the last
+                       Discover delicious moments made just for you.
+                       Experience delicious meals crafted with passsion, served fresh and made to bring happiness to every bite.</p>
+
+                    <div class="hero-btns">
+                        <button class="hero-btn" type="button" id="reviewBtn">Review Menu</button>
+                        <button class="hero-btn order-btn" type="button" id="orderBtn">Order Online<img src="Icons/arrow-up-right.png" width="23px" height="23px"></button>
+                    </div>
+                 </div>
+            </div>
+        </section>
+        <section id="popular-menu">
+            <div class="popular">
+                <div class="pupolar-title">
+                    <h2>Pupolar Menu</h2>
+                    <p>A test worth coming back for.</p>
+                    <p>Discover the flavors our guests love the most.</p>
+                </div>
+                <div class="popular-carts">
+                    
+                    <div class="carts">
+                        <span class="heart">
+                            <img src="Icons/heart.png" width="20px" height="20px">
+                        </span>
+                        <div class="cart">
+                            <div class="cart-img">
+                                <img src="foods images/rice2.jpg" alt="spagetti">
+                                <div class="img-lable">10% OFF</div>
+                            </div>
+                            <div class="cart-info">
+                                 <div class="img-name">
+                                    <h4>Spaghetti</h4>
+                                    <span>70$</span>
+                                 </div>
+                                 <p>Delicious spaghetti tossid in rich tomato sauce</p>
+                                 <p>with fresh herbs and savory spices</p>
+                                 <div class="img-stars">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                 </div>
+                                 <div class="img-rate">
+                                    <span>4.0/5</span>
+                                    <button id="addBtn" type="button" class="add-btn">Add 🛒</button>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carts" data-id="">
+                        <span class="heart">
+                            <img src="Icons/heart.png" width="20px" height="20px">
+                        </span>
+                        <div class="cart">
+                            <div class="cart-img">
+                                <img src="foods images/rice6.jpg" alt="spagetti">
+                                <div class="img-lable">10% OFF</div>
+                            </div>
+                            <div class="cart-info">
+                                 <div class="img-name">
+                                    <h4>Spaghetti</h4>
+                                    <span>70$</span>
+                                 </div>
+                                 <p>Delicious spaghetti tossid in rich tomato sauce</p>
+                                 <p>with fresh herbs and savory spices</p>
+                                 <div class="img-stars">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                 </div>
+                                 <div class="img-rate">
+                                    <span>4.0/5</span>
+                                    <button id="addBtn" type="button" class="add-btn">Add 🛒</button>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carts" data-id="">
+                        <span class="heart">
+                            <img src="Icons/heart.png" width="20px" height="20px">
+                        </span>
+                        <div class="cart">
+                            <div class="cart-img">
+                                <img src="foods images/1.jpg" alt="spagetti">
+                                <div class="img-lable">10% OFF</div>
+                            </div>
+                            <div class="cart-info">
+                                 <div class="img-name">
+                                    <h4>Spaghetti</h4>
+                                    <span>70$</span>
+                                 </div>
+                                 <p>Delicious spaghetti tossid in rich tomato sauce</p>
+                                 <p>with fresh herbs and savory spices</p>
+                                 <div class="img-stars">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                 </div>
+                                 <div class="img-rate">
+                                    <span>4.0/5</span>
+                                    <button id="addBtn" type="button" class="add-btn">Add 🛒</button>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carts" data-id="">
+                        <span class="heart">
+                            <img src="Icons/heart.png" width="20px" height="20px">
+                        </span>
+                        <div class="cart">
+                            <div class="cart-img">
+                                <img src="foods images/2.jpg" alt="sandwich">
+                                <div class="img-lable">10% OFF</div>
+                            </div>
+                            <div class="cart-info">
+                                 <div class="img-name">
+                                    <h4>Sandwich</h4>
+                                    <span>84$</span>
+                                 </div>
+                                 <p>Freshly made sandwich filled with juicy</p>
+                                 <p>ingredients, crisp and delicious sauce.</p>
+                                 <div class="img-stars">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                 </div>
+                                 <div class="img-rate">
+                                    <span>4.2/5</span>
+                                    <button id="addBtn" type="button" class="add-btn">Add 🛒</button>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carts" data-id="">
+                        <span class="heart">
+                            <img src="Icons/heart.png" width="20px" height="20px">
+                        </span>
+                        <div class="cart">
+                            <div class="cart-img">
+                                <img src="foods images/3.jpg" alt="food">
+                                <div class="img-lable">10% OFF</div>
+                            </div>
+                            <div class="cart-info">
+                                 <div class="img-name">
+                                    <h4>Shrimp</h4>
+                                    <span>68$</span>
+                                 </div>
+                                 <p>Spaghetti with shrimp juice, tossid in a rich garlic, </p>
+                                 <p>butter sauce with fresh herbs.</p>
+                                 <div class="img-stars">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                 </div>
+                                 <div class="img-rate">
+                                    <span>3.1/5</span>
+                                    <button id="addBtn" type="button" class="add-btn">Add 🛒</button>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carts" data-id="">
+                        <span class="heart">
+                            <img src="Icons/heart.png" width="20px" height="20px">
+                        </span>
+                        <div class="cart">
+                            <div class="cart-img">
+                                <img src="foods images/4.jpg" alt="sandwich">
+                                <div class="img-lable">15% OFF</div>
+                            </div>
+                            <div class="cart-info">
+                                 <div class="img-name">
+                                    <h4>Sandwich</h4>
+                                    <span>80$</span>
+                                 </div>
+                                 <p>Freshly made sandwich filled with juicy</p>
+                                 <p>ingredients, crisp and delicious sauces.</p>
+                                 <div class="img-stars">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                 </div>
+                                 <div class="img-rate">
+                                    <span>4.4/5</span>
+                                    <button id="addBtn" type="button" class="add-btn">Add 🛒</button>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carts" data-id="">
+                        <span class="heart">
+                            <img src="Icons/heart.png" width="20px" height="20px">
+                        </span>
+                        <div class="cart">
+                            <div class="cart-img">
+                                <img src="foods images/5.jpg" alt="pizza">
+                                <div class="img-lable">5% OFF</div>
+                            </div>
+                            <div class="cart-info">
+                                 <div class="img-name">
+                                    <h4>Pizza</h4>
+                                    <span>99$</span>
+                                 </div>
+                                 <p>Freshly baked pizza topped with melted cheese,</p>
+                                 <p>rich tomato sauce and flavorful toppings.</p>
+                                 <div class="img-stars">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                 </div>
+                                 <div class="img-rate">
+                                    <span>4.9/5</span>
+                                    <button id="addBtn" type="button" class="add-btn">Add 🛒</button>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carts" data-id="">
+                        <span class="heart">
+                            <img src="Icons/heart.png" width="20px" height="20px">
+                        </span>
+                        <div class="cart">
+                            <div class="cart-img">
+                                <img src="foods images/9.jpg" alt="drink">
+                                <div class="img-lable">20% OFF</div>
+                            </div>
+                            <div class="cart-info">
+                                 <div class="img-name">
+                                    <h4>Salmon</h4>
+                                    <span>70$</span>
+                                 </div>
+                                 <p>Tender grilled salmon with fresh herbs and a zesty</p>
+                                 <p>lemon touch.</p>
+                                 <div class="img-stars">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                    <img src="Icons/rate-star.png" width="30px" height="20px">
+                                 </div>
+                                 <div class="img-rate">
+                                    <span>4.3/5</span>
+                                    <button id="addBtn" type="button" class="add-btn">Add 🛒</button>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </section>
+        <section id="work">
+            <div class="work-content">
+                <div class="work-title">
+                    <h2>From Cranvings to Your Table</h2>
+                </div>
+                <div class="work-circle">
+                    <div class="circle-cart">
+                        <h3>01. Discover</h3>
+                        <p>Explore our carefully crafted menu and discover a world of delicious flavors.</p>
+                        <p>from mouthwatering main courses to irresistible desserts, there is something for every taste.</p>
+                        <p>get ready for a delightful dining experience.</p>
+                    </div>
+                    <div class="circle-cart">
+                        <h3>02. Choose</h3>
+                        <p>Found something you love? choose your favorite dishes and place</p>
+                        <p>your order online in just a few simple. planning a special meal with family or friend?</p>
+                        <p>reserve your table and let us prepare the perfect spot for you.</p>
+                    </div>
+                    <div class="circle-cart">
+                        <h3>03. Confirm</h3>
+                        <p>Take a moment to review your order or reservation details and make sure</p>
+                        <p>everything is just right. confirm your selection with ease and let us take care of the rest.</p>
+                        <p>we male the process simple, smooth and stress-free.</p>
+                    </div>
+                    <div class="circle-cart">
+                        <h3>04. Enjoy</h3>
+                        <p>savor every bite of your favorite meal or share wonderful moments around the</p>
+                        <p>table with the people you love. At yummy, every meal is an opportunity to creat delicious memories.</p>
+                    </div>
+                </div>
+            </div>
+             <div class="container">
+                <div class="track">
+                    <div class="card">
+                        <img src="Icons/yumm.png">
+                        <img src="Icons/yumm.png">
+                        <img src="Icons/yumm.png">
+                        <img src="Icons/yumm.png">
+                        <img src="Icons/yumm.png">
+                        <img src="Icons/yumm.png">
+                        <img src="Icons/yumm.png">
+                    </div>
+                    <div class="card">
+                        <img src="Icons/yumm.png">
+                        <img src="Icons/yumm.png">
+                        <img src="Icons/yumm.png">
+                        <img src="Icons/yumm.png">
+                        <img src="Icons/yumm.png">
+                        <img src="Icons/yumm.png">
+                        <img src="Icons/yumm.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Review-->
+        <section id="review">
+            <div class="review-content">
+                <div class="review-title">
+                    <h1>What Our Customers Say</h1>
+                    <p>Real experience, delicious memories and happy moments shared by our valued guests.</p>
+                    <p id="review-rate">Based reviews +</p>
+                </div>
+                <div class="carts-box">
+                    <div class="confirm">
+                        <p>Confirmed Review</p>
+                    </div>
+                    <div class="one-cart">
+                         <div class="top-cart">
+                             <img src="foods images/girl (1).jpg">
+                             <div class="proof-info">
+                                <p>profile name</p>
+                                <div class="proof-stars">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <span id="cart-rate">4.0/5</span>
+                                </div>
+                             </div>
+                              <div class="details">
+                                    <div class="pen">
+                                        <img src="Icons/pen-line.png" width="15px" height="auto">
+                                        <ul>
+                                            <li>Edit</li>
+                                            <li>Delete</li>
+                                        </ul>
+                                    </div>
+                                    <div class="date">
+                                        <p id="date">2026/10/13</p>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="down-cart">
+                            <textarea></textarea>
+                        </div>
+                        <div class="reply">
+                            <img src="Icons/message-square-text.png" width="15px" height="auto">
+                            <img src="Icons/crown.png" width="15px" height="auto">
+                        </div>
+                    </div>
+                     <div class="one-cart">
+                         <div class="top-cart">
+                             <img src="foods images/girl (2).jpg">
+                             <div class="proof-info">
+                                <p>profile name</p>
+                                <div class="proof-stars">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <span id="cart-rate">4.0/5</span>
+                                </div>
+                             </div>
+                              <div class="details">
+                                    <div class="pen">
+                                        <img src="Icons/pen-line.png" width="15px" height="auto">
+                                        <ul>
+                                            <li>Edit</li>
+                                            <li>Delete</li>
+                                        </ul>
+                                    </div>
+                                    <div class="date">
+                                        <p id="date">2026/10/13</p>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="down-cart">
+                            <textarea></textarea>
+                        </div>
+                        <div class="reply">
+                            <img src="Icons/message-square-text.png" width="15px" height="auto">
+                            <img src="Icons/crown.png" width="15px" height="auto">
+                        </div>
+                    </div>
+                     <div class="one-cart">
+                         <div class="top-cart">
+                             <img src="foods images/girl (3).jpg">
+                             <div class="proof-info">
+                                <p>profile name</p>
+                                <div class="proof-stars">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <span id="cart-rate">4.0/5</span>
+                                </div>
+                             </div>
+                              <div class="details">
+                                    <div class="pen">
+                                        <img src="Icons/pen-line.png" width="15px" height="auto">
+                                        <ul>
+                                            <li>Edit</li>
+                                            <li>Delete</li>
+                                        </ul>
+                                    </div>
+                                    <div class="date">
+                                        <p id="date">2026/10/13</p>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="down-cart">
+                            <textarea></textarea>
+                        </div>
+                        <div class="reply">
+                            <img src="Icons/message-square-text.png" width="15px" height="auto">
+                            <img src="Icons/crown.png" width="15px" height="auto">
+                        </div>
+                    </div>
+                     <div class="one-cart">
+                         <div class="top-cart">
+                             <img src="foods images/girl (4).jpg">
+                             <div class="proof-info">
+                                <p>profile name</p>
+                                <div class="proof-stars">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <span id="cart-rate">4.0/5</span>
+                                </div>
+                             </div>
+                              <div class="details">
+                                    <div class="pen">
+                                        <img src="Icons/pen-line.png" width="15px" height="auto">
+                                        <ul>
+                                            <li>Edit</li>
+                                            <li>Delete</li>
+                                        </ul>
+                                    </div>
+                                    <div class="date">
+                                        <p id="date">2026/10/13</p>
+                                    </div>
+                              </div>
+                          </div>
+                          <div class="down-cart">
+                              <textarea></textarea>
+                          </div>
+                          <div class="reply">
+                             <img src="Icons/message-square-text.png" width="15px" height="auto">
+                             <img src="Icons/crown.png" width="15px" height="auto">
+                         </div>
+                    </div>
+                     <div class="one-cart">
+                        <div class="top-cart">
+                             <img src="foods images/girl (5).jpg">
+                             <div class="proof-info">
+                                <p>Lamine Yamal</p>
+                                <div class="proof-stars">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <span id="cart-rate">4.0/5</span>
+                                </div>
+                             </div>
+                              <div class="details">
+                                    <div class="pen">
+                                        <img src="Icons/pen-line.png" width="15px" height="auto">
+                                        <ul>
+                                            <li>Edit</li>
+                                            <li>Delete</li>
+                                        </ul>
+                                    </div>
+                                    <div class="date">
+                                        <p id="date">2026/10/13</p>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="down-cart">
+                            <textarea></textarea>
+                        </div>
+                        <div class="reply">
+                            <img src="Icons/message-square-text.png" width="15px" height="auto">
+                            <img src="Icons/crown.png" width="15px" height="auto">
+                        </div>
+                    </div>
+                    <div class="one-cart">
+                        <div class="top-cart">
+                             <img src="foods images/girl (6).jpg">
+                             <div class="proof-info">
+                                <p>Cristiano Ronaldo</p>
+                                <div class="proof-stars">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <img src="Icons/star_new-removebg-preview.png" width="20px" height="auto">
+                                    <span id="cart-rate">4.0/5</span>
+                                </div>
+                             </div>
+                              <div class="details">
+                                    <div class="pen">
+                                        <img src="Icons/pen-line.png" width="15px" height="auto">
+                                        <ul>
+                                            <li>Edit</li>
+                                            <li>Delete</li>
+                                        </ul>
+                                    </div>
+                                    <div class="date">
+                                        <p id="date">2026/10/13</p>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="down-cart">
+                            <textarea></textarea>
+                        </div>
+                        <div class="reply">
+                            <img src="Icons/message-square-text.png" width="15px" height="auto">
+                            <img src="Icons/crown.png" width="15px" height="auto">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="review-btns">
+                    <button type="button" id="more">Load More<img src="Icons/arrow.png" width="20px" height="auto"></button>
+                    <button type="button" id="msg">Share your experience<img src="Icons/add comment.png" width="19px" height="auto"></button>
+                </div>
+            </div>
+           <div class="modal">
+               <div class="content">
+                    <div class="form-stars">
+                        <img src="Icons/star_new-removebg-preview.png" width="35px" height="auto">
+                        <img src="Icons/star_new-removebg-preview.png" width="35px" height="auto">
+                        <img src="Icons/star_new-removebg-preview.png" width="35px" height="auto">
+                        <img src="Icons/star_new-removebg-preview.png" width="35px" height="auto">
+                        <img src="Icons/star_new-removebg-preview.png" width="35px" height="auto">
+                    </div>
+                    <h2>How was your <span>meal?</span></h2>
+                    <div class="input">
+                        <textarea id="form-review" placeholder="Descripe your experience .."></textarea>
+                        <div class="btns">
+                            <button id="cancel-review">Cancel</button>
+                            <button id="submit-review">Post</button>
+                        </div>
+                    </div>
+               </div>
+           </div>
+        </section>
+    </main>
+
+       <div class="msg-box">  </div>
+      <!-- <div class="toast"> </div>-->
+       <div class="check-out-form">
+          <div class="check-order">
+             <button type="button" id="closeCheck"><img src="Icons/circle-x.png"></button>
+             <div class="check-content">
+                <div class="check-head">
+                    <img src="Icons/cart.png" alt="cart shop">
+                    <div class="check-head-text">
+                        <h3>Your Orders</h3>
+                        <p>Select your items and quantity.</p>
+                    </div>
+                </div>
+                <div class="check-scroll">
+                    
+                </div>
+              </div>
+              <div class="check-total">
+                <h4>Total Price:</h4>
+                <span id="checkTotal">0</span>
+             </div>
+          </div>
+          <div class="check-information">
+             <div class="user-info">
+                <div class="user-imgs">
+                    <img src="Icons/user-round (1).png">
+                    <h4>Customer Information</h4>
+                </div>
+                <div class="info-inputs">
+                  <div class="user-inputs">
+                     <label for="check-name">FullName</label>
+                     <input type="text" id="check-name" minlength="3" placeholder="Nasima" required>
+                  </div>
+                   <div class="user-inputs">
+                      <label for="phone-method">Phone number</label>
+                      <input type="tel" id="method-phone" name="phone-method" placeholder="+000 000 000" required>
+                   </div>
+                </div>
+             </div>
+             <div class="check-method">
+                <div class="method-head">
+                    <img src="Icons/map-pin (1).png">
+                    <h4>Delivery methods</h4>
+                </div>
+                <div class="check-method-way">
+                    <div class="method-delivery active" id="deliver">
+                        <img src="Icons/bike.png">
+                        <P>Delivery</P>
+                    </div>
+                    <div class="method-delivery" id="pickUp">
+                        <img src="Icons/add shop (3).png">
+                        <P>Pick Up</P>
+                    </div>
+                </div>
+                <div class="method-delivered">
+                     <div class="method-inputs">
+                        <label>Your Location Address</label>
+                        <input type="text" minlength="5" placeholder="Your delivery address.." id="checkAddress" required>
+                    </div>
+                    <div class="method-clock">
+                        <div class="method-date">
+                            <label for="method-date">Date</label>
+                            <input type="date" placeholder="Select date" id="methodDate" name="date-method" required>
+                        </div>
+                        <div class="method-date">
+                            <label for="method-time">Time</label>
+                            <input type="time" placeholder="Select Time" id="methodTime" name="method-time" required>
+                        </div>
+                   </div>
+                </div>
+             </div>
+             <div class="check-payment">
+                <div class="payment-head">
+                    <img src="Icons/credit-card.png">
+                    <h4>Payment Method</h4>
+                </div>
+                <div class="payment-method-way">
+                    <div class="payments-method active" id="cashPay">
+                        <img src="Icons/banknote-check.png">
+                        <p>Cash</p>
+                    </div>
+                    <div class="payments-method" id="onlinePay">
+                        <img src="Icons/credit-card-check.png">
+                        <p>Online Payment</p>
+                    </div>
+                </div>
+             </div>
+             <div class="additional">
+                <div class="additional-head">
+                    <img src="Icons/notepad-text.png">
+                    <h4>Your Additional Note</h4>
+                </div>
+                <textarea id="additional" placeholder="Your Additional message .."></textarea>
+             </div>
+             <button id="checkOutSubmit" type="submit">Place order<img src="Icons/circle-check-big.png"></button>
+          </div>
+       </div>
+
+
+
+       <div class="signForm">
+          <P>Sign in to Continue</P>
+          <button id="closeSign" type="button">x</button>
+
+          <div class="choose-account">
+            <button type="button" id="google">Google</button>
+            <button type="button" id="facebook">Facebook</button>
+          </div>
+
+          <div class="line-or">
+              <div class="line"></div>
+              <div class="noline">Or</div>
+              <div class="line"></div>
+          </div>
+
+           <div class="input">
+              <label for="email">Email Address</label>
+              <input type="email" id="sign-email" placeholder="Enter your email ..">
+           </div>
+           <div class="input">
+              <label for="password">Password</label>
+              <input type="password" id="sign-password" placeholder="Enter your password ..">
+           </div>
+
+          <button type="submit" id="sign-continue">Continue</button>
+          
+          <div class="have-account">
+             Don't have an account?<button type="button" id="sign-up">Sign Up</button>
+          </div>
+       </div>
+
+ <form id="signUpForm">
+    <div class="signup-modal">
+        <button type="button" id="closeSignUp">×</button>
+        <h3>Create Account</h3>
+        <div class="formgroup">
+            <label for="signup-name">Full Name</label>
+            <input type="text" id="signup-name" placeholder="Enter your name" required>
+        </div>
+        <div class="formgroup">
+            <label for="signup-email">Email Address</label>
+            <input type="email" id="signup-email" placeholder="Enter your email" required>
+        </div>
+        <div class="formgroup">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" placeholder="Create password" required>
+        </div>
+          <div class="formgroup">
+            <label for="signup-password">Confirm Password</label>
+            <input type="password" id="signup-password" placeholder="Create password" required>
+        </div>
+        <button type="submit" id="signup-submit">Create Account</button>
+        <p class="back-to-signin">Already have an account? <button type="button" id="to-signin">Sign in</button></p>
+    </div>
+</form>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="top-footer">
+                <div class="footer-support">
+                    <p><a href="#">Nasima@gmail.com</a></p>
+                    <p><a href="#">+93749 808 962</a></p>
+                </div>
+                <div class="footer-support">
+                    <p><a href="#" data-page="privacy" class="footer-links">Privacy policy</a></p>
+                    <p><a href="#" data-page="terms" class="footer-links">Terms & condation</a></p>
+                </div>
+                <div class="footer-support">
+                    <p><a href="#" data-page="help center" class="footer-links">FAQ/Help center</a></p>
+                    <p><a href="#" data-page="feedback" class="footer-links">Feedback</a></p>
+                </div>
+            </div>
+            <div class="medium-footer">
+                <p>The merchant is YummRa a Restaurant and online food service operating in Afghanistan orders, table reservation and payments made through this websiteare processed by the Restaurant.
+                for questions regarding orders, reservation, payments, cancellation or other service, please contact our support team through the help center or contact us page.</p>
+            </div>
+            <div class="down-footer">
+                <div class="copy">
+                    <p>&copy; 2026 Yummra Restaurant, all rights reserved</p>
+                </div>
+                <div class="media">
+                    <a href="https://www.instagram.com/yosufi_0782" target="_blank" rel="noopener noreferrer"><img src="Icons/icons8-instagram-48.png" alt="link-image" width="30px"></a>
+                     <a href="#" target="_blank"><img src="Icons/icons8-telegram-app-48.png" alt="link-image" width="30px"></a>
+                    <a href="https://www.tiktok.com/@nasima_0789" target="_blank"><img src="Icons/icons8-tik-tok-48.png" alt="link-image" width="30px"></a>
+                    <a href="#"><img src="Icons/icons8-facebook-48.png" alt="link-image" width="30px"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="javaScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+[
+    {
+        "name": "PIZZA",
+        "cost": 15.77,
+        "image": "foods images/pizza20.jpg",
+        "category": "pizza",
+        "details": "Absolute Pizza With Mistakes",
+        "id": 1
+    },
+       {
+        "name": "SANDWICH",
+        "cost": 10.77,
+        "image": "foods images/burger11.jpg",
+        "category": "sandwich",
+        "details": "Deliciose hot pizza",
+        "id": 2
+    },
+     {
+        "name": "PIZZA",
+        "cost": 11.55,
+        "image": "foods images/pizza14.jpg",
+        "category": "pizza",
+        "details": "Deliciose hot pizza",
+        "id": 3
+    },
+    {
+        "name": "BURGER",
+        "cost": 12.99,
+        "image": "foods images/burger3.jpg",
+        "category": "burger",
+        "details": "Deliciose hot pizza",
+        "id": 4
+    },
+    {
+        "name": "CHIKEN",
+        "cost": 18.55,
+        "image": "foods images/chiken1.jpg",
+        "category": "chiken",
+        "details": "Deliciose hot pizza",
+        "id": 5
+    },
+    {
+        "name": "SPAGHETTI",
+        "cost": 11.88,
+        "image": "foods images/spaghetti1.jpg",
+        "category": "pizza",
+        "details": "Deliciose hot pizza",
+        "id": 6
+    },
+    {
+        "name": "RICE",
+        "cost": 10.55,
+        "image": "foods images/rice2.jpg",
+        "category": "rice",
+        "details": "Deliciose hot pizza",
+        "id": 7
+    },
+    {
+        "name": "RICE",
+        "cost": 15.99,
+        "image": "foods images/rice6.jpg",
+        "category": "rice",
+        "details": "Deliciose hot pizza",
+        "id": 8
+    },
+    {
+        "name": "SOOP",
+        "cost": 10.55,
+        "image": "foods images/soop.jpg",
+        "category": "soop",
+        "details": "Deliciose hot pizza",
+        "id": 9
+    },
+    {
+        "name": "RICE",
+        "cost": 12.33,
+        "image": "foods images/rice7.jpg",
+        "category": "rice",
+        "details": "Deliciose hot pizza",
+        "id": 10
+    },
+    {
+        "name": "CHEPS",
+        "cost": 11.66,
+        "image": "foods images/meet cheps.jpg",
+        "category": "cheps",
+        "details": "Deliciose hot pizza",
+        "id": 11
+    },
+    {
+        "name": "PIZZA",
+        "cost": 11.99,
+        "image": "foods images/pizza6.jpg",
+        "category": "pizza",
+        "details": "Deliciose hot pizza",
+        "id": 12
+    },
+    {
+        "name": "MEET",
+        "cost": 25.99,
+        "image": "foods images/meet.jpg",
+        "category": "meet",
+        "details": "Deliciose hot pizza",
+        "id": 13
+    },
+    {
+        "name": "MEET",
+        "cost": 13.55,
+        "image": "foods images/meet1.jpg",
+        "category": "meet",
+        "details": "Deliciose hot pizza",
+        "id": 14
+    },
+    {
+        "name": "MEET",
+        "cost": 22.99,
+        "image": "foods images/meet4.jpg",
+        "category": "meet",
+        "details": "Deliciose hot pizza",
+        "id": 15
+    },
+    {
+        "name": "MEET",
+        "cost": 16.55,
+        "image": "foods images/meet7.jpg",
+        "category": "meet",
+        "details": "Deliciose hot pizza",
+        "id": 16
+    },
+    {
+        "name": "BURGER",
+        "cost": 12.66,
+        "image": "foods images/burger2.jpg",
+        "category": "burger",
+        "details": "Deliciose hot pizza",
+        "id": 17
+    },
+    {
+        "name": "CHIKEN",
+        "cost": 20.99,
+        "image": "foods images/chiken5.jpg",
+        "category": "chiken",
+        "details": "Deliciose hot pizza",
+        "id": 18
+    },
+    {
+        "name": "CHIKEN",
+        "cost": 17.66,
+        "image": "foods images/chiken4.jpg",
+        "category": "chiken",
+        "details": "Deliciose hot pizza",
+        "id": 19
+    }
+
+]

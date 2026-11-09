@@ -1,0 +1,64 @@
+<section class="reservation">
+    <div class="reservation-wrapper">
+        <div class="reservation-form">
+            <div class="form-header">
+                <div class="header-icon">🍽️</div>
+                <h2>Reserve Your Table</h2>
+                <p>Book your unforgettable dining experience today</p>
+            </div>
+            
+            <form id="formTable">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="table-name">Full Name</label>
+                        <input type="text" id="table-name" placeholder="Nasima" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="table-email">Email Address</label>
+                        <input type="email" id="table-email" placeholder="Nasima yosufi@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="table-date">Date</label>
+                        <input type="date" id="table-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="table-time">Time</label>
+                        <input type="time" id="table-time" required>
+                    </div>
+                    <div class="form-group full">
+                        <label for="table-people">Number of Guests</label>
+                        <input type="number" id="table-people" min="1" max="20" value="1" required>
+                    </div>
+                    <div class="form-group full">
+                        <label for="table-request">Special Requests</label>
+                        <textarea id="table-request" placeholder="Allergies, occasion, or preferences..."></textarea>
+                    </div>
+                </div>
+                
+                <button type="submit" id="reserve-table">
+                    Confirm Reservation
+                    <span class="btn-arrow">→</span>
+                </button>
+            </form>
+        </div>
+        
+        <div class="reservation-image">
+            <div class="image-badge">Available Tables</div>
+            <img src="../foods images/burger4.jpg" alt="Dining Table Setup">
+            <div class="table-info">
+                <span class="info-item">
+                    <span class="dot"></span>
+                    Indoor & Outdoor Seating
+                </span>
+                <span class="info-item">
+                    <span class="dot"></span>
+                    Free WiFi
+                </span>
+                <span class="info-item">
+                    <span class="dot"></span>
+                    Wheelchair Accessible
+                </span>
+            </div>
+        </div>
+    </div>
+</section>

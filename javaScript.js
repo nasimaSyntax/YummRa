@@ -76,6 +76,23 @@ function loadMenuFood(category = "all") {
        }).join("");
    });
 }
+// Category button active state + filter (delegated for dynamic menu page)
+document.addEventListener("click", function(e) {
+    const btn = e.target.closest("[data-category]");
+    if (!btn) return;
+    e.preventDefault();
+
+    const category = btn.dataset.category;
+
+    // Remove active from all category links
+    document.querySelectorAll("[data-category]").forEach(function(b) {
+        b.classList.remove("active");
+    });
+
+    // Add active to clicked button
+    btn.classList.add("active");
+    loadMenuFood(category);
+});
 // Category button filter — delegated for dynamically loaded menu page
 document.addEventListener("click", function(e) {
     const cBtn = e.target.closest("[data-category]");
@@ -662,21 +679,36 @@ placeOrder.addEventListener("click", function(e) {
     placeOrder.textContent = "Send";
    }, 5000);
 })
-//resposive nav menu
-const burgerMenu = document.getElementById("burgerMenu");
-const navMenu = document.querySelector(".nav-menu");
-burgerMenu.addEventListener("click", function() {
-    navMenu.classList.toggle("show");
-});
 document.addEventListener("click", function(e) {
-    if (!navMenu || !navMenu.classList.contains("show")) return;
-
-    if (navMenu.contains(e.target) || (burgerMenu && burgerMenu.contains(e.target))) return;
-
-    navMenu.classList.remove("show");
+    const btn = e.target.closest(".faq-show, .add-faq");
+    if (!btn) return;
+    
+    const faqInput = btn.closest(".faq-input");
+    if (!faqInput) return;
+    
+    const para = faqInput.querySelector(".faq-para");
+    if (!para) return;
+    
+    // Close all others first (accordion behavior)
+    document.querySelectorAll(".faq-para.show").forEach(p => {
+        if (p !== para) p.classList.remove("show");
+    });
+    para.classList.toggle("show");
 });
-const favMenu = document.getElementById("showFavList");
-const leftSide = document.querySelector(".leftside");
-favMenu.addEventListener("click", function() {
-    leftSide.classList.toggle("show");
-})
+// Fix: select main correctly (line 2 in your file uses "Main" but HTML tag is lowercase "main")
+document.addEventListener("click", function(e) {
+    const faqContact = e.target.closest("#faq-contact, [data-page='contact'], .contact-link");
+    if (!faqContact) return;
+    e.preventDefault();
+
+    fetch("navbar pages/contact.html")
+    .then(res => res.text())
+    .then(deta => {
+        if (main) {
+            main.innerHTML = deta;
+        } else {
+            console.error("Main element not found!");
+        }
+    })
+    .catch(err => console.error("Fetch failed:", err));
+});

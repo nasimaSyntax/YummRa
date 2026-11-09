@@ -166,19 +166,21 @@ function showCart(cartfood) {
                                 <img src="${d.image}">
                                 <div class="food-span"><span>${d.name}</span></div>
                             </div>
-                            <div class="price">
-                                <p><span class="price-number">${d.price}</span></p>
-                            </div>
-                            <div class="quantity">
-                                <button data-id="${d.id}">-</button>
-                                <span class="qty">${d.quantity}</span>
-                                <button data-id="${d.id}">+</button>
-                            </div>
-                            <div class="total">
-                                <p><span id="completeCost" class="totle">0</span></p>
-                            </div>
-                            <div class="delet">
-                                <img src="../Icons/trash.png" width="25px" ${d.id}>
+                            <div class="all-one-food">
+                               <div class="price">
+                                  <p><span class="price-number">${d.price}</span></p>
+                               </div>
+                               <div class="quantity">
+                                  <button data-id="${d.id}">-</button>
+                                  <span class="qty">${d.quantity}</span>
+                                  <button data-id="${d.id}">+</button>
+                               </div>
+                               <div class="total">
+                                  <p><span id="completeCost" class="totle">0</span></p>
+                               </div>
+                               <div class="delet">
+                                  <img src="../Icons/trash.png" width="25px" ${d.id}>
+                               </div>
                             </div>
                         </div>
             

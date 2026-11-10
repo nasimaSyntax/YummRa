@@ -635,21 +635,6 @@ function updateQuantity() {
     let result = quant * costNum;
     totalCheck.textContent = result;
 }
-/* document.addEventListener('click', function(d) {
-    const checkedFood = d.target.closest(".check-food");
-    if(!checkedFood) return;
-    const foodQty = checkedFood.querySelector("check-quantity");
-    let valueQty = Number(foodQty.textContent);
-
-    if(e.target.contains("check-plus")) {
-        valueQty++;
-    }
-    if(e.target.contains("check-less")) {
-        if(valueQty>1) {
-            valueQty--;
-        }
-    }
-})*/
 // checkout information
 const checkName = document.getElementById("check-name");
 const checkPhone = document.getElementById("method-phone");
@@ -681,9 +666,6 @@ placeOrder.addEventListener("click", function(e) {
     placeOrder.textContent = "Send";
    }, 5000);
 })
-
-
-
 document.addEventListener("click", function(e) {
     const btn = e.target.closest(".faq-show, .add-faq");
     if (!btn) return;
@@ -700,9 +682,6 @@ document.addEventListener("click", function(e) {
     });
     para.classList.toggle("show");
 });
-
-
-
 // Fix: select main correctly (line 2 in your file uses "Main" but HTML tag is lowercase "main")
 document.addEventListener("click", function(e) {
     const faqContact = e.target.closest("#faq-contact, [data-page='contact'], .contact-link");
@@ -719,4 +698,16 @@ document.addEventListener("click", function(e) {
         }
     })
     .catch(err => console.error("Fetch failed:", err));
+});
+
+const burgerMenu = document.getElementById("burgerMenu");
+const navMenu = document.querySelector(".nav-menu");
+burgerMenu.addEventListener("click", function(e) {
+    e.stopPropagation(); // stop the click from bubbling to document
+    navMenu.classList.toggle("show");
+});
+document.addEventListener("click", function(e) {
+    if (!navMenu || !navMenu.classList.contains("show")) return;
+    if (navMenu.contains(e.target) || burgerMenu.contains(e.target)) return;
+    navMenu.classList.remove("show");
 });

@@ -4439,6 +4439,7 @@ margin-top: 87px;
         top: 37%;
         left: 0.7em;
         background-color: var(--meshki2);
+        box-shadow: 5px 5px 10px black;
     }
     .hero .hero-texts {
         width: 70%;

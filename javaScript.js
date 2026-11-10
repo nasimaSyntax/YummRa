@@ -711,3 +711,5 @@ document.addEventListener("click", function(e) {
     if (navMenu.contains(e.target) || burgerMenu.contains(e.target)) return;
     navMenu.classList.remove("show");
 });
+
+//back btn

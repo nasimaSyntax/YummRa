@@ -1,4 +1,12 @@
 [
+     {
+        "name": "pasta",
+        "cost": 15.33,
+        "image": "foods images/pastaa (3).jpg",
+        "category": "pasta",
+        "details": "Absolute Pizza With Mistakes",
+        "id": 22
+    },
     {
         "name": "PIZZA",
         "cost": 15.77,
@@ -7,10 +15,18 @@
         "details": "Absolute Pizza With Mistakes",
         "id": 1
     },
+     {
+        "name": "Pasta",
+        "cost": 13.77,
+        "image": "foods images/pastaa (1).jpg",
+        "category": "pasta burger",
+        "details": "Absolute Pizza With Mistakes",
+        "id": 20
+    },
        {
         "name": "SANDWICH",
         "cost": 10.77,
-        "image": "foods images/burger11.jpg",
+        "image": "foods images/meet1.jpg",
         "category": "sandwich",
         "details": "Deliciose hot pizza",
         "id": 2
@@ -95,6 +111,22 @@
         "details": "Deliciose hot pizza",
         "id": 12
     },
+     {
+        "name": "Burger",
+        "cost": 15.77,
+        "image": "foods images/burger.jpg",
+        "category": "burger",
+        "details": "Absolute Pizza With Mistakes",
+        "id": 23
+    },
+     {
+        "name": "Burger",
+        "cost": 15.77,
+        "image": "foods images/burger10.jpg",
+        "category": "burger",
+        "details": "Absolute Pizza With Mistakes",
+        "id": 24
+    },
     {
         "name": "MEET",
         "cost": 25.99,
@@ -135,6 +167,14 @@
         "details": "Deliciose hot pizza",
         "id": 17
     },
+     {
+        "name": "Burger",
+        "cost": 15.77,
+        "image": "foods images/burger15.jpg",
+        "category": "burger",
+        "details": "Absolute Pizza With Mistakes",
+        "id": 25
+    },
     {
         "name": "CHIKEN",
         "cost": 20.99,
@@ -150,6 +190,46 @@
         "category": "chiken",
         "details": "Deliciose hot pizza",
         "id": 19
+    },
+     {
+        "name": "Ice drink",
+        "cost": 15.00,
+        "image": "foods images/drink11.jpg",
+        "category": "drink",
+        "details": "Absolute Pizza With Mistakes",
+        "id": 26
+    },
+     {
+        "name": "fruit drink",
+        "cost": 15.77,
+        "image": "foods images/fruit drink.jpg",
+        "category": "drink",
+        "details": "Absolute Pizza With Mistakes",
+        "id": 27
+    },
+       {
+        "name": "Pasta",
+        "cost": 11.00,
+        "image": "foods images/pastaa (2).jpg",
+        "category": "pasta burger",
+        "details": "Absolute Pizza With Mistakes",
+        "id": 21
+    },
+     {
+        "name": "juice",
+        "cost": 15.07,
+        "image": "foods images/lemmon.jpg",
+        "category": "drink",
+        "details": "Absolute Pizza With Mistakes",
+        "id": 28
+    },
+     {
+        "name": "juice",
+        "cost": 15.77,
+        "image": "foods images/jam.jpg",
+        "category": "drink",
+        "details": "Absolute Pizza With Mistakes",
+        "id": 29
     }
 
 ]

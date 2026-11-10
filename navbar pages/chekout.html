@@ -1,17 +1,65 @@
-         <div class="check-food" data-id="${order.id}">
-              <div class="food-imgs">
-                 <div class="check-img">
-                    <img src="${order.img}">
-                 </div>
-                 <div class="check-food-name">
-                    <h4 class="checkFoodName">${order.name}</h4>
-                    <span class="checkFoodCost">${order.price}</span>
-                 </div>
-             </div>
-             <div class="check-quant">
-                  <button class="check-less" type="button" data-id="${order.id}">-</button>
-                  <span id="check-quantity">${order.quantity}</span>
-                  <button class="check-plus" type="button" data-id="${order.id}">+</button>
-                  <button type="button" class="check-delete" data-id ="${order.id}"><img src="Icons/x.png"></button>
-             </div>
+<div class="order-overly">
+   <form class="order-form">
+      <!--form header-->
+      <div class="form-header">
+         <div>
+            <h2>Your order</h2>
+            <p>Complete your order details</p>
          </div>
+         <button id="close-order-form">x</button>
+      </div>
+
+      <div class="form-body">
+     <!--foods summry-->
+         <div class="form-summary">
+            <button id="formSummary">Order Summary (<span class="summary-numbers">0</span>) <span class="summary-arrow">v</span></button>
+            <div class="summary-content">
+               <div class="summary-food">
+                  <div class="food-item">
+                     <h3 class="summary-food-name">food name</h3>
+                     <p>x<span class="summary-food-number">1</span></p>
+                  </div>
+                  <span class="summary-food-price">0$</span>
+               </div>
+            </div>
+         </div>
+         <h3>Order type</h3>
+         <div class="order-type-group">
+            <label class="type-option">
+               <input type="radio" name="orderType" value="Delivery" checked>
+               <span>Delivery</span>
+            </label>
+            <label class="type-option">
+               <input type="radio" name="orderType" value="pickup">
+               <span>Pick Up</span>
+            </label>
+         </div>
+         <h3>Customer Information</h3>
+         <input type="text" id="customerName" placeholder="FullName" minlength="4">
+         <input type="tel" id="customerPhone" placeholder="Phone Number" min="10">
+         <div class="address-field">
+             <input type="text" id="address-delivery" placeholder="Delivery Address">
+         </div>
+         <h3>Payment Methods</h3>
+         <div class="order-type-group">
+            <label class="type-option">
+               <input type="radio" name="pay" value="Cash" checked>
+               <span>Cash</span>
+            </label>
+            <label class="type-option">
+               <input type="radio" name="pay" value="restaurant">
+               <span>Online pay</span>
+            </label>
+         </div>
+         <h3>Additional Information</h3>
+         <textarea placeholder="Special instructions(Optional)" rows="3" id="custom-additional"></textarea>
+      </div>
+      <div class="form-footer">
+         <div class="order-form-total">
+            <p>Tatal Price:</p>
+            <strong>0$</strong>
+         </div>
+         <button id="formOrderSub" type="submit">Place Order</button>
+      </div>
+   </form>
+</div>

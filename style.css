@@ -176,7 +176,7 @@ header .down-navbar .order button:hover {
     margin-top: 87px;
     width: 100%;
     min-height: 80vh;
-    background-image: url("foods images/pasts banar.png");
+    background-image: url("foods images/pasts banar.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0 50%;
@@ -1150,7 +1150,8 @@ margin-top: 87px;
      width: 70%;
      z-index: 5;
      font-size: 1em;
-     height: 50px;
+     min-height: 50px;
+     height: auto;
      display: flex;
      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
      align-items: center;
@@ -4363,7 +4364,7 @@ margin-top: 87px;
     top: 20%;
    }
    #shopCart .cart-title>img {
-    margin-left: 1em;
+    margin-left: 0.5em;
    }
     #FAQ {
         min-height: 570px;
@@ -5212,10 +5213,10 @@ footer .footer-content {
 }
 @media (max-width: 480px) {
 
-    main {
+main {
         overflow-x: hidden;
-    }
-    #shopCart .empty-shop #human {
+}
+#shopCart .empty-shop #human {
     top: 50%;
     width: 300px;
     
@@ -5226,7 +5227,7 @@ footer .footer-content {
 #shopCart .empty-shop p {
     font-size: 1.1em;
 }
-    .info-item {
+.info-item {
     width: 120px;
     font-size: 0.65em;
     height: 30px;
@@ -5236,6 +5237,10 @@ footer .footer-content {
     width: 80%;
     height: 3em;
     }
+     #shopCart .cart-title>img {
+    margin-left: 7px;
+    width: 70px;
+   }
     .contact-box {
         padding: 1.5rem 1rem;
     }
@@ -5423,7 +5428,7 @@ footer .footer-content {
     margin: 10px auto;
 }
 #foodMenu .food-cart .food-img {
-    width: 100%;
+    width: 90%;
     height: 60%;
 }
 #foodMenu .food-img .food-cost {

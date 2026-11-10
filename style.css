@@ -5212,7 +5212,9 @@ footer .footer-content {
 }
 @media (max-width: 480px) {
 
-
+    main {
+        overflow-x: hidden;
+    }
     #shopCart .empty-shop #human {
     top: 50%;
     width: 300px;

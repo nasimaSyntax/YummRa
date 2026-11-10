@@ -3625,23 +3625,6 @@ margin-top: 87px;
     background: var(--orange);
     border-radius: 50%;
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-    .reservation-wrapper {
-        flex-direction: column;
-    }
-    .reservation-image {
-        height: 200px;
-        order: -1;
-    }
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-    .reservation-form {
-        padding: 2rem 1.5rem;
-    }
-}
 /*check out form*/
 .check-out-form {
     width: 80%;
@@ -4324,8 +4307,8 @@ margin-top: 87px;
     filter: invert(1);
 }
 
-/* ===== Breakpoints ===== */
-/* 1044px */
+
+
 @media (max-width: 1044px) {
     #contact-page {
         padding: 3rem 1.5rem;
@@ -4339,90 +4322,6 @@ margin-top: 87px;
     .visit-cart-form {
         padding: 1.75rem 1.5rem;
     }
-}
-
-/* 960px */
-@media (max-width: 960px) {
-    .contact-box {
-        grid-template-columns: 1fr;
-        padding: 2rem 1.5rem;
-    }
-    .visit-one-cart {
-        order: 2;
-    }
-    .visit-cart-form {
-        order: 1;
-    }
-}
-
-/* 768px */
-@media (max-width: 768px) {
-    #contact-page {
-        padding: 2rem 1rem;
-    }
-    .contact-box {
-        padding: 2rem 1rem;
-        border-radius: 16px;
-    }
-    .visit-title h2 {
-        font-size: 1.5rem;
-    }
-    .visit-cart {
-        padding: 0.75rem;
-        gap: 0.75rem;
-    }
-    .visit-cart img {
-        width: 35px;
-        height: 35px;
-    }
-    .visit-cart-form {
-        padding: 1.5rem 1rem;
-    }
-    .visit-cart-form h2 {
-        font-size: 1.5rem;
-    }
-}
-
-/* 480px */
-@media (max-width: 480px) {
-    .contact-box {
-        padding: 1.5rem 1rem;
-    }
-    .visit-title h2 {
-        font-size: 1.35rem;
-    }
-    .visit-title span {
-        font-size: 0.75rem;
-    }
-    .visit-cart img {
-        width: 30px;
-        height: 30px;
-    }
-    .cart-para h3 {
-        font-size: 0.9rem;
-    }
-    .cart-para p,
-    .short-para {
-        font-size: 0.8rem;
-    }
-    .visit-cart-form {
-        padding: 1.25rem 1rem;
-    }
-    .visit-cart-form h2 {
-        font-size: 1.3rem;
-    }
-    .visit-cart-form input,
-    .visit-cart-form select,
-    .visit-cart-form textarea {
-        padding: 0.85rem;
-        font-size: 0.9rem;
-    }
-    #visit-form {
-        padding: 0.85rem;
-        font-size: 0.9rem;
-    }
-}
-@media (max-width: 1044px) {
     .nav-menu.show {
         display: block;
     }
@@ -4668,6 +4567,16 @@ margin-top: 87px;
 }
 }
 @media (max-width: 960px) {
+     .contact-box {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.5rem;
+    }
+    .visit-one-cart {
+        order: 2;
+    }
+    .visit-cart-form {
+        order: 1;
+    }
     .hero .hero-texts{
         margin-top: 2em;
         width: 90%;
@@ -4900,6 +4809,43 @@ margin-top: 87px;
 
 }
 @media (max-width: 768px) {
+    .reservation-wrapper {
+        flex-direction: column;
+    }
+    .reservation-image {
+        height: 200px;
+        order: -1;
+    }
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .reservation-form {
+        padding: 2rem 1.5rem;
+    }
+    #contact-page {
+        padding: 2rem 1rem;
+    }
+    .contact-box {
+        padding: 2rem 1rem;
+        border-radius: 16px;
+    }
+    .visit-title h2 {
+        font-size: 1.5rem;
+    }
+    .visit-cart {
+        padding: 0.75rem;
+        gap: 0.75rem;
+    }
+    .visit-cart img {
+        width: 35px;
+        height: 35px;
+    }
+    .visit-cart-form {
+        padding: 1.5rem 1rem;
+    }
+    .visit-cart-form h2 {
+        font-size: 1.5rem;
+    }
     .hero .hero-texts .hero-btn {
         width: 150px;
         height: 40px;
@@ -5339,12 +5285,57 @@ footer .footer-content {
 }
 }
 @media (max-width: 480px) {
+    .contact-box {
+        padding: 1.5rem 1rem;
+    }
+    .visit-title h2 {
+        font-size: 1.35rem;
+    }
+    .visit-title span {
+        font-size: 0.75rem;
+    }
+    .visit-cart img {
+        width: 30px;
+        height: 30px;
+    }
+    .cart-para h3 {
+        font-size: 0.9rem;
+    }
+    .cart-para p,
+    .short-para {
+        font-size: 0.8rem;
+    }
+    .visit-cart-form {
+        padding: 1.25rem 1rem;
+    }
+    .visit-cart-form h2 {
+        font-size: 1.3rem;
+    }
+    .visit-cart-form input,
+    .visit-cart-form select,
+    .visit-cart-form textarea {
+        padding: 0.85rem;
+        font-size: 0.9rem;
+    }
+    #visit-form {
+        padding: 0.85rem;
+        font-size: 0.9rem;
+    }
+
 .hero .hero-texts .hero-btn {
      margin-top: -1em;
 }
 #popular-menu .popular .popular-carts .carts {
-    width: 180px;
-    margin-left: -7px;
+    width: 182px;
+    margin-left: 0;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#popular-menu .popular .popular-carts .carts>span {
+    position: absolute;
+    top: 0;
+    left: 70%;
 }
 #popular-menu .popular .popular-carts .carts .cart .cart-info .img-rate button {
         width: 90px;

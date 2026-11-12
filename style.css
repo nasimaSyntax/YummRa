@@ -5643,16 +5643,205 @@ footer .footer-content {
     margin-top: 10px;
 }
 }
-
-
-
-
-
-
-
-
-
-
+.order-overly {
+width: 450px;
+max-width: 100%;
+height: 85dvh;
+max-height: 700px;
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ background-color: #101010;
+ z-index: 20;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-top-left-radius: 20px;
+ border-top-right-radius: 20px;
+ transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.order-overly.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.order-form {
+    width: 100%;
+    max-width: 95%;
+    max-height: 600px;
+    display: flex;
+    margin-top: -5em;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(30px);
+    padding: 5px;
+    transition: transform 0.4s ease;
+    font-family: sans-serif;
+    color: var(--smoke);
+    margin-bottom: 2em;
+}
+.order-overly.active .order-form {
+    transform: translateY(0);
+}
+.form-header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+    padding-bottom: 10px;
+}
+.form-header h2 {
+    color: var(--orange);
+    font-size: 1.6em;
+    margin-left: -50px;
+    cursor: default;
+}
+.form-header p {
+    margin-left: 16px;
+    margin-top: -6px;
+    cursor: default;
+}
+.form-header>button {
+    width: 30px;
+    height: 30px;
+    font-size: 1.6em;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.form-body {
+    width: 100%;
+    max-width: 500px;
+    min-height: 480px;
+    height: auto;
+    overflow-y: auto;
+    margin-top: -25px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    scrollbar-width: none;
+}
+.form-body .form-summary {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #171717;
+}
+.form-summary button {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    background-color: transparent;
+    color: var(--orange);
+    border: none;
+    padding: 0 10px;
+}
+.form-summary button .summary-arrow {
+    margin-left: 11rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+.summary-content {
+    width: 100%;
+    height: auto;
+    padding: 6px;
+}
+.summary-food {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7px;
+}
+.summary-food .food-item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 6px;
+    cursor: default;
+}
+.form-body>h3 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.order-type-group {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+.order-type-group .type-option {
+  width: 100%;
+  background-color: #171717;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.type-option:has(input:checked) {
+    border: 1px solid var(--orange);
+    color: var(--orange);
+}
+.type-option input {
+    accent-color: var(--orange);
+}
+.form-body>input, .form-body textarea, .form-body .address-field input {
+    background-color: #171717;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 13px;
+    font-size: 17px;
+    outline: none;
+    height: 45px;
+    width: 100%;
+    border-radius: 7px;
+    margin: 5px auto;
+}
+.form-body>input:focus, .form-body textarea:focus, .form-body .address-field input:focus {
+    border: 1px solid rgba(255, 193, 8, 0.5);
+}
+.form-footer {
+    width: 100%;
+    height: 95px;
+    padding: 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form-footer button {
+    width: 100%;
+    height: 80%;
+    border-radius: 8px;
+    background-color: var(--orange);
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--smoke);
+    border: none;
+    margin-top: 7px;
+}
+.order-form-total  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.order-form-total p {
+    font-size: 1.1rem;
+}
+.order-form-total strong {
+    font-size: 1.2rem;
+}
 
 
 

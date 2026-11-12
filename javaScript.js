@@ -564,6 +564,7 @@ bookBtn.addEventListener("click", function() {
         main.innerHTML = deta;
     }) 
 })
+/*
 let OrderNowFoods = JSON.parse(localStorage.getItem("orderNowFood")) || [];
 let selectOrder;
 const checkForm = document.querySelector(".check-out-form");
@@ -634,38 +635,7 @@ function updateQuantity() {
     let totalCheck = document.getElementById("checkTotal");
     let result = quant * costNum;
     totalCheck.textContent = result;
-}
-// checkout information
-const checkName = document.getElementById("check-name");
-const checkPhone = document.getElementById("method-phone");
-const checkDeliver = document.getElementById("deliver");
-const checkPickup = document.getElementById("pickUp");
-const checkLocation = document.getElementById("checkAddress");
-const checkDate = document.getElementById("methodDate");
-const checkTime = document.getElementById("methodTime");
-const checkCashPay = document.getElementById("cashPay");
-const checkOnlinePay = document.getElementById("onlinePay");
-const checkAdditional = document.getElementById("additional");
-const placeOrder = document.getElementById("checkOutSubmit");
-
-const allInputs = [
-    checkName, checkPhone, checkDeliver, checkPickup, checkLocation, checkDate, checkTime, checkCashPay, checkOnlinePay,checkAdditional
-];
-placeOrder.addEventListener("click", function(e) {
-    e.preventDefault();
-    if(checkName.value === "") {
-        alert("Enter your name!");
-        return;
-    }
-    if(checkPhone.value === "" ) {
-        alert("enter your phone number");
-        return;
-    }
-   placeOrder.textContent = "sending ..";
-   setTimeout(function() {
-    placeOrder.textContent = "Send";
-   }, 5000);
-})
+}*/
 document.addEventListener("click", function(e) {
     const btn = e.target.closest(".faq-show, .add-faq");
     if (!btn) return;

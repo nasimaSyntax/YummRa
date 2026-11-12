@@ -623,101 +623,84 @@
 
        <div class="msg-box">  </div>
       <!-- <div class="toast"> </div>-->
-       <div class="check-out-form">
-          <div class="check-order">
-             <button type="button" id="closeCheck"><img src="Icons/circle-x.png"></button>
-             <div class="check-content">
-                <div class="check-head">
-                    <img src="Icons/cart.png" alt="cart shop">
-                    <div class="check-head-text">
-                        <h3>Your Orders</h3>
-                        <p>Select your items and quantity.</p>
-                    </div>
-                </div>
-                <div class="check-scroll">
-                    
-                </div>
-              </div>
-              <div class="check-total">
-                <h4>Total Price:</h4>
-                <span id="checkTotal">0</span>
-             </div>
-          </div>
-          <div class="check-information">
-             <div class="user-info">
-                <div class="user-imgs">
-                    <img src="Icons/user-round (1).png">
-                    <h4>Customer Information</h4>
-                </div>
-                <div class="info-inputs">
-                  <div class="user-inputs">
-                     <label for="check-name">FullName</label>
-                     <input type="text" id="check-name" minlength="3" placeholder="Nasima" required>
+ <div class="order-overly">
+   <form class="order-form">
+      <!--form header-->
+      <div class="form-header">
+         <div>
+            <h2>Your order</h2>
+            <p>Complete your order details</p>
+         </div>
+         <button id="close-order-form">x</button>
+      </div>
+      <div class="form-body">
+     <!--foods summry-->
+         <div class="form-summary">
+            <button id="formSummary">Order Summary (<span class="summary-numbers">0</span>) <span class="summary-arrow">v</span></button>
+            <div class="summary-content">
+               <div class="summary-food">
+                  <div class="food-item">
+                     <h4 class="summary-food-name">food name</h4>
+                     <p>x<span class="summary-food-number">1</span></p>
                   </div>
-                   <div class="user-inputs">
-                      <label for="phone-method">Phone number</label>
-                      <input type="tel" id="method-phone" name="phone-method" placeholder="+000 000 000" required>
-                   </div>
-                </div>
-             </div>
-             <div class="check-method">
-                <div class="method-head">
-                    <img src="Icons/map-pin (1).png">
-                    <h4>Delivery methods</h4>
-                </div>
-                <div class="check-method-way">
-                    <div class="method-delivery active" id="deliver">
-                        <img src="Icons/bike.png">
-                        <P>Delivery</P>
-                    </div>
-                    <div class="method-delivery" id="pickUp">
-                        <img src="Icons/add shop (3).png">
-                        <P>Pick Up</P>
-                    </div>
-                </div>
-                <div class="method-delivered">
-                     <div class="method-inputs">
-                        <label>Your Location Address</label>
-                        <input type="text" minlength="5" placeholder="Your delivery address.." id="checkAddress" required>
-                    </div>
-                    <div class="method-clock">
-                        <div class="method-date">
-                            <label for="method-date">Date</label>
-                            <input type="date" placeholder="Select date" id="methodDate" name="date-method" required>
-                        </div>
-                        <div class="method-date">
-                            <label for="method-time">Time</label>
-                            <input type="time" placeholder="Select Time" id="methodTime" name="method-time" required>
-                        </div>
-                   </div>
-                </div>
-             </div>
-             <div class="check-payment">
-                <div class="payment-head">
-                    <img src="Icons/credit-card.png">
-                    <h4>Payment Method</h4>
-                </div>
-                <div class="payment-method-way">
-                    <div class="payments-method active" id="cashPay">
-                        <img src="Icons/banknote-check.png">
-                        <p>Cash</p>
-                    </div>
-                    <div class="payments-method" id="onlinePay">
-                        <img src="Icons/credit-card-check.png">
-                        <p>Online Payment</p>
-                    </div>
-                </div>
-             </div>
-             <div class="additional">
-                <div class="additional-head">
-                    <img src="Icons/notepad-text.png">
-                    <h4>Your Additional Note</h4>
-                </div>
-                <textarea id="additional" placeholder="Your Additional message .."></textarea>
-             </div>
-             <button id="checkOutSubmit" type="submit">Place order<img src="Icons/circle-check-big.png"></button>
-          </div>
-       </div>
+                  <span class="summary-food-price">0$</span>
+               </div>
+               <div class="summary-food">
+                  <div class="food-item">
+                     <h4 class="summary-food-name">food name</h4>
+                     <p>x<span class="summary-food-number">1</span></p>
+                  </div>
+                  <span class="summary-food-price">0$</span>
+               </div>
+               <div class="summary-food">
+                  <div class="food-item">
+                     <h4 class="summary-food-name">food name</h4>
+                     <p>x<span class="summary-food-number">1</span></p>
+                  </div>
+                  <span class="summary-food-price">0$</span>
+               </div>
+            </div>
+         </div>
+         <h3>Order type</h3>
+         <div class="order-type-group">
+            <label class="type-option">
+               <input type="radio" name="orderType" value="Delivery" checked>
+               <span>Delivery</span>
+            </label>
+            <label class="type-option">
+               <input type="radio" name="orderType" value="pickup">
+               <span>Pick Up</span>
+            </label>
+         </div>
+         <h3>Customer Information</h3>
+         <input type="text" id="customerName" placeholder="FullName" minlength="4">
+         <input type="tel" id="customerPhone" placeholder="Phone Number" min="10">
+         <div class="address-field">
+             <input type="text" id="address-delivery" placeholder="Delivery Address">
+         </div>
+         <h3>Payment Methods</h3>
+         <div class="order-type-group">
+            <label class="type-option">
+               <input type="radio" name="pay" value="Cash" checked>
+               <span>Cash</span>
+            </label>
+            <label class="type-option">
+               <input type="radio" name="pay" value="restaurant">
+               <span>Online pay</span>
+            </label>
+         </div>
+         <h3>Additional Information</h3>
+         <textarea placeholder="Special instructions(Optional)" rows="3" id="custom-additional"></textarea>
+      </div>
+      <div class="form-footer">
+         <div class="order-form-total">
+            <p>Tatal Price:</p>
+            <strong>0$</strong>
+         </div>
+         <button id="formOrderSub" type="submit">Place Order</button>
+      </div>
+   </form>
+</div>
 
 
 

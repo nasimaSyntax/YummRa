@@ -682,4 +682,44 @@ document.addEventListener("click", function(e) {
     navMenu.classList.remove("show");
 });
 
-//back btn
+//check ot form
+let nowOrdered =[];
+const orderOverly = document.querySelector(".order-overly");
+const orderForm = document.querySelector(".order-form");
+const orderClosed = document.getElementById("close-order-form");
+orderClosed.addEventListener("click", function() {
+    orderOverly.classList.remove("active");
+})
+document.addEventListener("click", function(eve) {
+    const orderNowBrn = eve.target.closest(".food-order");
+    if(!orderNowBrn) return;
+    const orderNowFood = orderNowBrn.closest(".food-cart");
+    if(!orderNowFood) return;
+    const orderId = orderNowFood.dataset.id;
+    const orderN = orderNowFood.querySelector(".head-three").textContent;
+    const orderPri = orderNowFood.querySelector(".food-cost").textContent;
+    nowOrdered = [{
+      id: orderId,
+      name: orderN,
+      price: orderPri,
+      quantity: 1
+    }]
+    orderOverly.classList.add("active");
+    showOrderItem(nowOrdered);
+})
+function showOrderItem(ordered) {
+  const summaryBox = document.querySelector(".summary-content");
+  if(!summaryBox) return;
+  summaryBox.innerHTML = "";
+ordered.forEach(function(order) {
+    summaryBox.innerHTML = `
+              <div class="summary-food">
+                  <div class="food-item">
+                     <h4 class="summary-food-name">${order.name}</h4>
+                     <p>x <span class="summary-food-number">${order.quantity}</span></p>
+                  </div>
+                  <span class="summary-food-price">${order.price}</span>
+               </div>
+    `
+}).join(".");
+}

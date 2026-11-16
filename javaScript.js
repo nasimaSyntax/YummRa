@@ -103,7 +103,7 @@ document.addEventListener("click", function(e) {
 });
 
 
-const foods = JSON.parse(localStorage.getItem("food")) || [];
+let foods = JSON.parse(localStorage.getItem("food")) || [];
 cartCount.textContent = foods.length;
 document.addEventListener("click", function(event) {
     const addBtn = event.target.closest(".food-add");
@@ -429,7 +429,6 @@ if (toSignin) {
         signModal.classList.add("active");
     });
 }
-
 // Close signup when clicking outside
 document.addEventListener("click", function(e) {
     if (signUpForm.classList.contains("active") &&
@@ -669,7 +668,6 @@ document.addEventListener("click", function(e) {
     })
     .catch(err => console.error("Fetch failed:", err));
 });
-
 const burgerMenu = document.getElementById("burgerMenu");
 const navMenu = document.querySelector(".nav-menu");
 burgerMenu.addEventListener("click", function(e) {
@@ -681,8 +679,7 @@ document.addEventListener("click", function(e) {
     if (navMenu.contains(e.target) || burgerMenu.contains(e.target)) return;
     navMenu.classList.remove("show");
 });
-
-//check ot form
+//check out form
 let nowOrdered =[];
 const orderOverly = document.querySelector(".order-overly");
 const orderForm = document.querySelector(".order-form");
@@ -705,21 +702,108 @@ document.addEventListener("click", function(eve) {
       quantity: 1
     }]
     orderOverly.classList.add("active");
-    showOrderItem(nowOrdered);
+    populateCheckoutSummary(nowOrdered);
 })
-function showOrderItem(ordered) {
-  const summaryBox = document.querySelector(".summary-content");
-  if(!summaryBox) return;
-  summaryBox.innerHTML = "";
-ordered.forEach(function(order) {
-    summaryBox.innerHTML = `
-              <div class="summary-food">
-                  <div class="food-item">
-                     <h4 class="summary-food-name">${order.name}</h4>
-                     <p>x <span class="summary-food-number">${order.quantity}</span></p>
-                  </div>
-                  <span class="summary-food-price">${order.price}</span>
-               </div>
-    `
-}).join(".");
+//check out order btn
+document.addEventListener("click", function(c) {
+    const checkc = c.target.closest("#checkoutBtn");
+    if(!checkc) return;
+      let foods = JSON.parse(localStorage.getItem("food")) || [];
+        orderOverly.classList.add("active");
+    showOrderItem(foods);
+})
+// Checkout button click — opens checkout form and shows total
+document.addEventListener("click", function(e) {
+    const checkoutBtn = e.target.closest("#checkoutBtn, .checkout-btn, [data-action='checkout']");
+    if (!checkoutBtn) return;
+    e.preventDefault();
+    // Get cart items from localStorage
+    const foods = JSON.parse(localStorage.getItem("food")) || [];
+    // Populate checkout summary
+    populateCheckoutSummary(foods);
+    // Show checkout form/modal
+    const checkoutForm = document.querySelector(".check-out-form") || document.getElementById("checkoutModal");
+    if (checkoutForm) {
+        checkoutForm.style.display = "grid"; // or "flex"/"block"
+    }
+
+    // Calculate and show total
+    calculate2();
+});
+// Populate checkout summary with cart items
+function populateCheckoutSummary(foods) {
+    const summaryContent = document.querySelector(".summary-content");
+    if (!summaryContent) return;
+    if (!foods || foods.length === 0) {
+        summaryContent.innerHTML = "<p style='text-align:center; color:#666; padding:2rem;'>No items in cart</p>";
+        const total = document.getElementById("totalPrice");
+        if (total) total.textContent = "$0.00";
+        return;
+    }
+    summaryContent.innerHTML = foods.map(function(food) {
+        const priceNum = parseFloat(String(food.price).replace(/[^0-9.]/g, "")) || 0;
+        const itemTotal = priceNum * food.quantity;
+
+        return `
+            <div class="summary-food" data-id="${food.id}">
+                <div class="summary-food-info">
+                    <h4 class="summary-food-name">${food.name}</h4>
+                    <span class="summary-food-number">x${food.quantity}</span>
+                </div>
+                <span class="summary-food-price">${priceNum.toFixed(2)}</span>
+            </div>
+        `;
+    }).join("");
 }
+// Calculate total cost
+function calculate2() {
+    const orderedfood = document.querySelector(".summary-content");
+    if (!orderedfood) return;
+
+    let sum = 0;
+    orderedfood.querySelectorAll(".summary-food").forEach(function(food) {
+        const priceText = food.querySelector(".summary-food-price")?.textContent || "0";
+        const quantText = food.querySelector(".summary-food-number")?.textContent || "1";
+
+        const price = parseFloat(priceText.replace(/[^0-9.]/g, "")) || 0;
+        const quant = parseFloat(quantText.replace(/[^0-9.]/g, "")) || 1;
+
+        const result = price * quant;
+        sum += result;
+    });
+
+    const total = document.getElementById("totalPrice");
+    if (total) total.textContent = "$" + sum.toFixed(2);
+
+    return sum;
+}
+// Call calculate2 whenever quantity changes in checkout too
+document.addEventListener("click", function(e) {
+    const qtyBtn = e.target.closest(".summary-food .quantity button, .checkout-qty-btn");
+    if (!qtyBtn) return;
+
+    const summaryItem = qtyBtn.closest(".summary-food");
+    if (!summaryItem) return;
+
+    const qtySpan = summaryItem.querySelector(".summary-food-number");
+    let qty = parseInt(qtySpan.textContent) || 1;
+
+    if (qtyBtn.classList.contains("checkout-qty-plus") || qtyBtn.textContent.trim() === "+") {
+        qty++;
+    } else if (qtyBtn.classList.contains("checkout-qty-minus") || qtyBtn.textContent.trim() === "-") {
+        if (qty > 1) qty--;
+    }
+
+    qtySpan.textContent = qty;
+
+    // Also update localStorage
+    const id = summaryItem.dataset.id;
+    let foods = JSON.parse(localStorage.getItem("food")) || [];
+    const item = foods.find(f => f.id == id);
+    if (item) {
+        item.quantity = qty;
+        localStorage.setItem("food", JSON.stringify(foods));
+    }
+
+    calculate2();
+});

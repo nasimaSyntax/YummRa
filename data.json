@@ -16,9 +16,9 @@
         "id": 1
     },
      {
-        "name": "Pasta",
-        "cost": 13.77,
-        "image": "foods images/pastaa (1).jpg",
+        "name": "Burger",
+        "cost": 13.57,
+        "image": "foods images/4.jpg",
         "category": "pasta burger",
         "details": "Absolute Pizza With Mistakes",
         "id": 20

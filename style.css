@@ -1971,7 +1971,6 @@ margin-top: 87px;
     height: auto;
     display: flex;
     flex-direction: column;
-    padding: 0.6rem;
     position: relative;
     background-color: #171717;
 }
@@ -2018,6 +2017,7 @@ margin-top: 87px;
     height: auto;
     display: flex;
     flex-direction: column;
+    padding: 0.7rem;
 }
 .one-food {
     width: 100%;
@@ -4120,7 +4120,7 @@ margin-top: 87px;
 /*order form*/
 .order-overly {
 width: 100%;
-max-width: 400px;
+max-width: 440px;
 height: 85dvh;
 max-height: 700px;
  position: fixed;
@@ -4132,11 +4132,12 @@ max-height: 700px;
  display: flex;
  align-items: center;
  justify-content: center;
- border-top-left-radius: 20px;
- border-top-right-radius: 20px;
+ border-top-left-radius: 60px;
+ border-top-right-radius: 60px;
  transition: opacity 0.3s ease, visibility 0.3s ease;
  opacity: 0;
  visibility: hidden;
+ box-shadow:  0 -4px 13px rgb(37, 37, 37);
 }
 .order-overly.active {
     opacity: 1;
@@ -4254,12 +4255,12 @@ max-height: 700px;
 .order-type-group {
     width: 100%;
     display: flex;
-    gap: 1rem;
+    gap: 0.7rem;
 }
 .order-type-group .type-option {
   width: 100%;
   background-color: #171717;
-  height: 45px;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
